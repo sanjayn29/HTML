@@ -12,7 +12,7 @@ Forms and Tags
 
             <form action="submit" method="post">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><hr><br>
+                <input type="text" id="name" name="name" required placeholder="Enter ur Name"><br><hr><br>
 
                 <label for ="age">Age:</label>
                 <input type="number" id="age" name="age" max="100"><br><hr><br>
@@ -36,6 +36,14 @@ Forms and Tags
                 <input type="radio" id="female" name="gender" value="female">Female<br>
                 <input type="radio" id="other" name="gender" value="other">Other<br><hr><br>
 
+                <label for = "city">City</label>
+                <select id = "city" name = "city">
+                    <option value = "">Select a city</option>
+                    <option value = "New York">New York</option>
+                    <option value = "Los Angeles">Los Angeles</option>
+                    <option value = "Chicago">Chicago</option>
+                </select><br><hr><br>
+
                 <label for="file">Upload File:</label>
                 <input type="file" id="file" name="file"><br><hr><br>
 
@@ -45,5 +53,29 @@ Forms and Tags
                 <input type="submit" value="Submit">
             </form>
             <hr>
+            <div >
+                <center>>
+                <h2>example</h2>
+                <form>
+                    <label for="name">Name :</label>
+                    <input type="text" id="name" name ="name" placeholder="enter ur name"><br>
+
+                    <label for = "age group">Age Group :</label>
+                    <input type = "radio" id="age group" name="age group" value="18-25">18-25<br>
+                    <input type="radio" id="age group" name="age group" value="26-35">26-35<br>
+
+                    <label for="skills">Skills</label>
+                    <input type="checkbox" id="skills" name = "skills" value="html">Html<br>
+                    <input type="checkbox" id="skills" name = "skills" value="css">Css<br>
+
+                    <label for="area">area : </label>
+                    <select id ="area" name="area">
+                        <option value="">select</option>
+                        <option value="chennai">chennai</option>
+                        <option value="coimbatore">coimbatore</option>
+                    </select>
+            </form>
+            </center>
+            </div>
         </div>
 </html>
