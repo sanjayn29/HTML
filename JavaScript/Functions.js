@@ -49,3 +49,7 @@ function countDown(n) {
 }
 
 countDown(5);
+
+function samplefunction(){
+  alert("This is a sample function");
+}
