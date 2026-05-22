@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Outputs</title>
+    </head>
+    <body>
+        <h1>By using the innerHTML property</h1>
+        <p id="demo">Before the function call</p>
+        <h1>By using the innerText property</h1>
+        <p id="demo1">Before the function call</p>
+        <button type="button" onclick="myfunction()">Click to view the function</button><br><br>
+        <button type="button" onclick="allert()">Click to view the alert</button><br><br>
+        <script>
+            function myfunction(){
+                document.getElementById("demo").innerHTML="After the function call";
+                document.getElementById("demo1").innerText="After the function call";
+            }
+            document.write("This is just a Document Write");
+            function allert(){
+                alert(" This is an Alert Box");
+            }
+            console.log("This is just a Console Log");
+        </script>    
+
+    </body>
+</html>
