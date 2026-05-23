@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Local Storage Counter</title>
+        <style>
+            button{
+                font-size: 15px;
+                padding: 10px;
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1>Local Storage Counter</h1>
+        <p id="ans" style="font-size:80px;">0</p>        
+        <button type="button" onclick="inc()">Increase </button><br><br>
+        <button type="button" onclick="dec()">Decrease</button><br><br>
+        <button type="button" onclick="reset()">Reset</button><br><br>
+        <button type="button" onclick="save()">Save the Value</button><br><br>
+        <button type="button" onclick="load()">Load the Value</button><br><br>
+        </center>
+        <script>
+            let count = 0;
+            function updatecount(){
+                document.getElementById("ans").innerHTML=count;
+            }
+            function inc(){
+                count++;
+                updatecount();
+            }
+            function dec(){
+                count--;
+                updatecount();
+            }
+            function reset(){
+                count = 0;
+                updatecount();
+            }
+            function save(){
+                localStorage.setItem("count",count);                
+            }
+            function load(){
+                const ans = localStorage.getItem("count");
+                if (ans != null){
+                    count = Number(ans);
+                }
+                updatecount();
+            }
+        </script>
+    </body>
+</html>
