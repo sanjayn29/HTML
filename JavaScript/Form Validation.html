@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validation</title>
+        <style>
+            input{
+                padding : 10px;
+                width:200px;
+            }
+            .error{
+                color:red;
+            }
+            #success{
+                color:green;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1>Form Validation</h1>
+        <div class="formbox">
+            <form id="form">
+                <label for="name">Name</label><br>
+                <input type="text" id="name" name="name"><br>
+                <p id="error1" class="error"></p>
+                <label for="email" placeholdrer="Enter your email">Email</label><br>
+                <input type="email" id="email" name="email"><br>
+                <p id="error2" class="error"></p> 
+                <button type="submit">Submit</button>
+            </form>
+            <p id="success"></p>
+        </div>
+        </center>
+        <script>
+            let form = document.getElementById("form");
+            let name = document.getElementById("name");
+            let email = document.getElementById("email");
+            let error1 = document.getElementById("error1");
+            let error2 = document.getElementById("error2");
+            let success = document.getElementById("success");
+
+            form.addEventListener("submit", validateForm);
+
+        // Stops page reload
+        function validateForm(event) {
+
+        event.preventDefault();
+        // Get input value
+        let value = name.value.trim();
+        let emailValue = email.value.trim();
+        let valid=true;
+        // Validation
+        if(value.length < 3){
+            error1.innerHTML = "Name must contain at least 3 characters";
+            success.innerHTML = "";
+            valid = false;
+        }
+        else{
+           error1.innerHTML = "";
+        }
+
+         if( !emailValue.includes("@") ||  !emailValue.includes(".")) {
+        error2.innerHTML = "Enter a valid email";
+        success.innerHTML = "";
+        valid = false;
+    }
+    else {
+        error2.innerHTML = "";
+    }
+    if (valid){
+        success.innerHTML = "Form submitted successfully";
+        success.className = "success";
+    } 
+} 
+    </script>
+    </body>
+</html>
