@@ -1,0 +1,47 @@
+<!DoCTYPE html>
+<html>
+    <head>
+        <title>Model Popup</title>
+        <style>
+            #model{
+                display:none;
+                position:fixed;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background-color:rgba(0,0,0,0.5);
+            }
+            #box{
+                background-color:white;
+                width:300px;
+                margin:100px auto;
+                padding:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1>Model Popup</h1>
+        <button type="button" onclick="openpop()">Open Popup</button><br>
+        <div id="model">
+            <div id="box">
+                <button type="button" onclick="closepop()">X</button>
+                <h1>Model Popup</h1>
+                <p>This is a model popup</p>
+            </div>
+        </div>
+        </center>   
+        <script>
+        let model = document.getElementById("model");
+
+        function openpop(){
+            model.style.display="block";
+        }
+        function closepop(){
+            model.style.display="none";
+        }
+                        
+        </Script>
+    </body>
+</html>
