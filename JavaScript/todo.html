@@ -1,0 +1,32 @@
+<!DOCTYPE html>>
+<html>
+    <head>
+        <title>To Do</title>
+        <style>
+            button{
+                font-size: 15px;
+                padding: 10px;
+                width: 100px;
+            }
+            input{
+                font-size: 15px;
+                padding: 10px;
+                width: 300px;
+            }
+             ul{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1>TODO List of urs</h1>
+        <input type="text" id="task" placeholder="Enter the task">
+        <button type="button" onclick="addtask()">Add Task</button><br>
+        <h4>Yours Task's:</h4><br>
+        <ul id = "list"></ul>
+        <button type="button" onclick="cleantask()">Clean Task</button>
+        </center>
+        <script src="todo.js"></script>
+     </body>
+</html>
