@@ -1,0 +1,24 @@
+<!DOCTYPE type>
+<html>
+    <head>
+        <title>
+               setTimeout
+        </title>
+    </head>
+    <body>
+        <center>
+        <h1>SetTimeout</h1>
+        <button type="button" id="btnn">Click the button</button>
+        <p id="demo"></p>
+        </center>
+        <script>
+            document.getElementById("btnn").addEventListener("click",timeout);
+            function timeout(){
+                setTimeout(timee,2000);
+            }
+            function timee(){
+                document.getElementById("demo").innerHTML = "Hellow After 2 Seconds";
+            }
+        </script>
+    </body>
+</html>
