@@ -1,0 +1,30 @@
+<!DOCTYPE type>
+<html>
+    <head>
+        <title>
+               setInterval And clearInterval
+        </title>
+    </head>
+    <body>
+        <center>
+        <h1>SetInterval and clearInterval</h1>
+        <button type="button" id="set">Click the button to set interval</button>
+        <button type="button" id="clear">Click the button to clear interval</button>
+        <p id="demo"></p>
+        </center>
+        <script>
+            let sett=document.getElementById("set");
+            let clearr=document.getElementById("clear");
+            sett.addEventListener("click",function(){
+                interval = setInterval(timee,2000);
+            });
+            clearr.addEventListener("click",function(){
+                clearInterval(interval);
+            });
+            function timee(){
+                let t = new Date();
+                document.getElementById("demo").innerHTML = t.getHours() + ":" + t.getMinutes() + ":" + t.getSeconds();
+            }
+        </script>
+    </body>
+</html>
