@@ -1,0 +1,21 @@
+<!DOCTYPE type>
+<html>
+    <head>
+        <title>
+               setInterval
+        </title>
+    </head>
+    <body>
+        <center>
+        <h1>SetInterval</h1>
+        <p id="demo"></p>
+        </center>
+        <script>
+            setInterval(timee,1000);
+            function timee(){
+                let t = new Date();
+                document.getElementById("demo").innerHTML = t.getHours() + ":" + t.getMinutes() + ":" + t.getSeconds();
+            }
+        </script>
+    </body>
+</html>
